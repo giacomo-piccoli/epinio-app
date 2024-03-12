@@ -1,4 +1,4 @@
-This Aplication is just a Area calculator
+This Aplication is just a Simple Api
 
 Preparing the enviroment for the aplication
 For this aplication is recomended to use Minikube, so if you dont have install following the Oficial Doc:https://minikube.sigs.k8s.io/docs/start/
