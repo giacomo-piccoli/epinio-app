@@ -80,7 +80,6 @@ The default password is _"password"_. So use:
 ```
 $ epinio settings show
 ```
-to verify if everything has running very well
 Last Step 
 Now to deploy the aplication 
 
