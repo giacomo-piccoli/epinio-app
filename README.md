@@ -59,7 +59,9 @@ Now that you depoloyed epinio you will need the CLI to interact with it
 $ curl -o epinio -L https://github.com/epinio/epinio/releases/download/v1.5.0/epinio-linux-x86_64
 ```
 ```
+```
 $ chmod +x epinio
+```
 ```
 Now to check if everithyng is fine just run the Command bellow 
 $ epinio version
