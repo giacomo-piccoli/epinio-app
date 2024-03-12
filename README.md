@@ -63,9 +63,11 @@ $ chmod +x epinio
 Now to check if everithyng is fine just run the Command bellow 
 $ epinio version
 if your output comes out like this
+```
 > epinio version
 Epinio Version: v1.5.0
 Go Version: go1.18
+```
 you had a sucefull installation of the epinio cli
 
 Now to access epinio just type commnad bellow 
