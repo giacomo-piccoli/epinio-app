@@ -5,15 +5,14 @@ For this aplication is recomended to use Minikube, so if you dont have install f
 
 after installing, continue with the steps bellow
 
-```
 $ minikube start --driver=docker
-```
 
-```
+
+
 $ minikube addons enable metallb
-```
 
-```
+
+
 $ minikube addons configure metallb
 
 -- Enter Load Balancer Start IP: 192.168.49.100
@@ -21,7 +20,7 @@ $ minikube addons configure metallb
      Using image metallb/speaker:v0.9.6
      Using image metallb/controller:v0.9.6
   metallb was successfully configured
-```
+
 
 Install epinio on minikube
 
@@ -29,9 +28,9 @@ Epinio need two resources to works, first: one _ingress-control_ and one _cert-m
 
   In order to install _ingress-control_ use:
 
-```
+
 $ minikube addons enable ingress
-```
+
 Cert Manager
 
 to install the cert manager run the commands bellow
@@ -49,18 +48,17 @@ first add the helm repo in your machine.
 $ helm repo add epinio https://epinio.github.io/helm-charts
 After that run the command bellow to update the helm repositories
 $ helm repo update
-```
+
 After doing the steps above you are ready to deploy epinio 
-```
+
 $ helm install epinio -n epinio --create-namespace epinio/epinio --set global.domain=192-168-49-100.sslip.io
-```
+
 Now that you depoloyed epinio you will need the CLI to interact with it
-```
+
 $ curl -o epinio -L https://github.com/epinio/epinio/releases/download/v1.5.0/epinio-linux-x86_64
-```
+
 $ chmod +x epinio
-```
-```
+
 Now to check if everithyng is fine just run the Command bellow 
 $ epinio version
 if your output comes out like this
@@ -71,18 +69,18 @@ you had a sucefull installation of the epinio cli
 
 Now to access epinio just type commnad bellow ```
 epinio login -u admin 'https://epinio.192-168-49-100.sslip.io'
-```
+
 Trust the certificate by pressing ```'y'``` and ```'enter'```
 
 The default password is _"password"_. So use: 
-```
+
 $ epinio settings show
-```
+
 to verify if everything has running very well
 Last Step 
 Now to deploy the aplication 
 
 inside the app path use:
-```
+
 epinio push --name sample-app  --path ../epinio-app
-```
+
